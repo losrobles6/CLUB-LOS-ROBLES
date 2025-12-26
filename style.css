@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f4f4;
+  color: #222;
+}
+
+.header {
+  background: #0b5d3b;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 45px;
+  margin-right: 10px;
+}
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+              url('../assets/img/hero.jpg') center/cover;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* CALENDARIO */
+.calendario {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.match {
+  display: grid;
+  grid-template-columns: 80px 1fr 100px;
+  align-items: center;
+  background: white;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-left: 6px solid #0b5d3b;
+}
+
+.fecha {
+  text-align: center;
+}
+
+.fecha .dia {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.fecha .mes {
+  font-size: 14px;
+  color: #0b5d3b;
+}
+
+.hora {
+  text-align: center;
+  font-weight: bold;
+}
+
+footer {
+  background: #0b5d3b;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}

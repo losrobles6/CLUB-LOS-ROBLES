@@ -152,3 +152,63 @@ footer {
   opacity: 1;
   transform: scale(1.05);
 }
+
+
+/* TIENDA PREVIEW */
+.shop-preview {
+  background: #ffffff;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.shop-preview h2 {
+  font-size: 28px;
+  color: #0b5d3b;
+  margin-bottom: 10px;
+}
+
+.shop-subtitle {
+  color: #555;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.product img {
+  width: 100%;
+  max-width: 260px;
+  transition: transform 0.3s ease;
+}
+
+.product h3 {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.product:hover img {
+  transform: scale(1.08);
+}
+
+.shop-button {
+  display: inline-block;
+  margin-top: 50px;
+  padding: 14px 32px;
+  background: #0b5d3b;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+
+.shop-button:hover {
+  background: #09472e;
+}

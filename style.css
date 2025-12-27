@@ -101,3 +101,54 @@ footer {
   padding: 15px;
   margin-top: 40px;
 }
+
+
+
+/* PATROCINADORES */
+.sponsors {
+  background: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.sponsors h2 {
+  margin: 40px 0 20px;
+  color: #0b5d3b;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sponsor-grid {
+  display: grid;
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.sponsor-grid.main {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.sponsor-grid.premium {
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+.sponsor-grid.official {
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.sponsor-grid img {
+  max-width: 140px;
+  filter: grayscale(100%);
+  opacity: 0.85;
+  transition: all 0.3s ease;
+}
+
+.sponsor-grid img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}

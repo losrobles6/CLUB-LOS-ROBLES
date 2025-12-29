@@ -66,8 +66,15 @@
 
 
 <!-- FORMULARIO -->
-<form class="contact-form">
-<h2>Envíanos un mensaje</h2>
+<form class="contact-form" onsubmit="enviarWhatsApp(event)">
+  <h2>Envíanos un mensaje</h2>
+
+  <input type="text" id="nombre" placeholder="Nombre completo" required />
+  <input type="email" id="email" placeholder="Correo electrónico" required />
+  <textarea id="mensaje" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+
+  <button type="submit">Enviar mensaje</button>
+</form>
 
 
 <input type="text" placeholder="Nombre completo" required />
@@ -81,6 +88,26 @@
 
 </section>
 
+<script>
+function enviarWhatsApp(e) {
+  e.preventDefault();
 
+  const nombre = document.getElementById("nombre").value;
+  const email = document.getElementById("email").value;
+  const mensaje = document.getElementById("mensaje").value;
+
+  const telefono = "573000000000"; // 👈 TU NÚMERO CON CÓDIGO PAÍS (Colombia)
+
+  const texto = 
+    `Hola Club Los Robles 👋%0A%0A` +
+    `Nombre: ${nombre}%0A` +
+    `Email: ${email}%0A%0A` +
+    `Mensaje:%0A${mensaje}`;
+
+  const url = `https://wa.me/${telefono}?text=${texto}`;
+
+  window.open(url, "_blank");
+}
+</script>
 </body>
 </html>

@@ -72,3 +72,87 @@
   transform: scale(1.02);
   transition: 0.3s;
 }
+
+
+.contador-flotante {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: linear-gradient(135deg, #0b5d3b, #1b8f5a);
+  color: white;
+  padding: 18px 20px;
+  border-radius: 18px;
+  width: 260px;
+  z-index: 999;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+  animation: slideUp 0.8s ease;
+}
+
+.contador-flotante h4 {
+  margin: 0 0 5px;
+  font-size: 18px;
+}
+
+.contador-flotante .rival {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.contador-flotante .fecha {
+  font-size: 13px;
+  opacity: 0.9;
+  margin-bottom: 12px;
+}
+
+.tiempo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tiempo div {
+  background: rgba(255,255,255,0.18);
+  padding: 8px 10px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 45px;
+}
+
+.tiempo span {
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+}
+
+.tiempo small {
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+.cerrar {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.cerrar:hover {
+  opacity: 1;
+}
+
+/* Animación */
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+  .contador-flotante {
+    width: 90%;
+    left: 5%;
+    right: auto;
+    bottom: 15px;
+  }
+}

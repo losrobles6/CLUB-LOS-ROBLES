@@ -21,3 +21,22 @@ closeBtn.onclick = () => modal.style.display = "none";
 window.onclick = e => {
   if (e.target === modal) modal.style.display = "none";
 };
+
+
+
+const reveals = document.querySelectorAll(".player-card");
+
+const revealOnScroll = () => {
+  reveals.forEach(card => {
+    const top = card.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (top < windowHeight - 100) {
+      card.classList.add("active");
+      card.classList.add("reveal");
+    }
+  });
+};
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);

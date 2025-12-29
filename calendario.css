@@ -1,0 +1,74 @@
+.calendario {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.calendario h2 {
+  text-align: center;
+  color: #0b5d3b;
+  margin-bottom: 10px;
+}
+
+.torneos {
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: bold;
+  color: #555;
+}
+
+.mes {
+  margin-bottom: 50px;
+}
+
+.mes h3 {
+  color: #0b5d3b;
+  margin-bottom: 20px;
+  border-left: 5px solid #0b5d3b;
+  padding-left: 12px;
+}
+
+.partido {
+  background: #f5f5f5;
+  padding: 18px 22px;
+  border-radius: 14px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* ESTADOS */
+.partido.jugado {
+  background: #9e9e9e;
+}
+
+.partido.perdido {
+  background: #c62828;
+}
+
+.partido.ganado {
+  background: #0d47a1;
+}
+
+.partido.proximo {
+  background: #1b8f5a;
+}
+
+.partido span {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.partido small {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* Hover */
+.partido:hover {
+  transform: scale(1.02);
+  transition: 0.3s;
+}

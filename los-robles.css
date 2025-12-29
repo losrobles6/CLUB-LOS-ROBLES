@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6f5;
+  color: #222;
+}
+
+/* HERO */
+.hero-nosotros {
+  background: linear-gradient(135deg, #0b5d3b, #118c5a);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+/* TIMELINE */
+.timeline-section {
+  padding: 80px 20px;
+}
+
+.timeline-section h2 {
+  text-align: center;
+  margin-bottom: 60px;
+  color: #0b5d3b;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: #0b5d3b;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  width: 50%;
+  padding: 20px;
+  position: relative;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+.timeline-item .circle {
+  width: 60px;
+  height: 60px;
+  background: #0b5d3b;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  position: absolute;
+  top: 20px;
+}
+
+.timeline-item.left .circle {
+  right: -30px;
+}
+
+.timeline-item.right .circle {
+  left: -30px;
+}
+
+.timeline-item .content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.1);
+  animation: fadeUp 1s ease;
+}
+
+/* MISION VISION VALORES */
+.mvv-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 80px 40px;
+  background: #fff;
+}
+
+.mvv-card {
+  background: #f4f6f5;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,.1);
+}
+
+.mvv-card h3 {
+  color: #0b5d3b;
+}
+
+/* FOOTER */
+.footer-europeo {
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.footer-europeo h3 {
+  color: #19a96f;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 25px 0;
+}
+
+.social-icons a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: .3s;
+}
+
+.social-icons a:hover {
+  color: #19a96f;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    left: 0;
+    text-align: left;
+    padding-left: 40px;
+  }
+
+  .timeline-item .circle {
+    left: -10px;
+  }
+}

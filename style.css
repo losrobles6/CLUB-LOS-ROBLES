@@ -481,3 +481,9 @@ footer {
   scrollbar-color: #0b5d3b #eaeaea;
   scrollbar-width: thin;
 }
+
+@media (max-width: 768px) {
+  .players-row .player-card {
+    flex: 0 0 180px;
+  }
+}

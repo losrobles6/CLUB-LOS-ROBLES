@@ -166,5 +166,35 @@ for (let i = 0; i < 30; i++) {
   document.body.appendChild(snow);
 }
 </script>
+
+
+  <script>
+  const fechaProximo = new Date("February 20, 2026 15:00:00").getTime();
+
+  const timer = setInterval(() => {
+    const ahora = new Date().getTime();
+    const diff = fechaProximo - ahora;
+
+    if (diff <= 0) {
+      clearInterval(timer);
+      document.querySelector(".contador-flotante").innerHTML =
+        "<strong>¡HOY JUEGA LOS ROBLES! ⚽🔥</strong>";
+      return;
+    }
+
+    document.getElementById("fdias").innerText =
+      Math.floor(diff / (1000 * 60 * 60 * 24));
+    document.getElementById("fhoras").innerText =
+      Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    document.getElementById("fminutos").innerText =
+      Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    document.getElementById("fsegundos").innerText =
+      Math.floor((diff % (1000 * 60)) / 1000);
+  }, 1000);
+
+  function cerrarContador() {
+    document.getElementById("contadorFlotante").style.display = "none";
+  }
+</script>
 </body>
 </html>

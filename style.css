@@ -444,3 +444,40 @@ footer {
     font-size: 16px;
   }
 }
+
+
+/* FILA HORIZONTAL DE JUGADORES */
+.players-row {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 15px 5px 25px;
+  scroll-snap-type: x mandatory;
+}
+
+/* cada tarjeta */
+.players-row .player-card {
+  flex: 0 0 220px;
+  scroll-snap-align: start;
+}
+
+/* scrollbar visible y elegante */
+.players-row::-webkit-scrollbar {
+  height: 8px;
+}
+
+.players-row::-webkit-scrollbar-track {
+  background: #eaeaea;
+  border-radius: 10px;
+}
+
+.players-row::-webkit-scrollbar-thumb {
+  background: #0b5d3b;
+  border-radius: 10px;
+}
+
+/* Firefox */
+.players-row {
+  scrollbar-color: #0b5d3b #eaeaea;
+  scrollbar-width: thin;
+}

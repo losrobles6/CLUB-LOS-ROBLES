@@ -1,0 +1,133 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f4f6f5;
+  color: #1f2933;
+}
+
+/* HEADER */
+.contact-header {
+  background: linear-gradient(135deg, #0f5132, #198754);
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.contact-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.contact-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* CONTENEDOR */
+.contact-container {
+  max-width: 1100px;
+  margin: -40px auto 60px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  animation: fadeUp 1s ease;
+}
+
+/* INFO */
+.contact-info h2 {
+  color: #198754;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin-bottom: 20px;
+}
+
+.contact-info ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.contact-info li {
+  margin-bottom: 10px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  text-decoration: none;
+  background: #198754;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.social-links a:hover {
+  background: #0f5132;
+  transform: translateY(-4px);
+}
+
+/* FORMULARIO */
+.contact-form h2 {
+  margin-bottom: 20px;
+  color: #198754;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 14px;
+  background: #198754;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.contact-form button:hover {
+  background: #0f5132;
+  transform: scale(1.03);
+}
+
+/* ANIMACIÓN */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}

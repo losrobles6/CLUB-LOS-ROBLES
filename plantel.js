@@ -70,3 +70,18 @@ const navLinks = document.querySelector(".nav-links");
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
+
+
+
+<script>
+for (let i = 0; i < 30; i++) {
+  const snow = document.createElement("div");
+  snow.className = "snowflake";
+  snow.innerHTML = "❄";
+  snow.style.left = Math.random() * 100 + "vw";
+  snow.style.animationDuration = (5 + Math.random() * 5) + "s";
+  snow.style.opacity = Math.random();
+  snow.style.fontSize = (10 + Math.random() * 20) + "px";
+  document.body.appendChild(snow);
+}
+</script>

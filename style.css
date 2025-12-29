@@ -482,6 +482,15 @@ footer {
   scrollbar-width: thin;
 }
 
+.players-row::after {
+  content: "← desliza →";
+  position: sticky;
+  right: 10px;
+  align-self: center;
+  font-size: 12px;
+  color: #888;
+}
+
 @media (max-width: 768px) {
   .players-row .player-card {
     flex: 0 0 180px;

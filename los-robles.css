@@ -401,3 +401,72 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+
+.aniversario-18 {
+  padding: 90px 8%;
+  background: linear-gradient(135deg, #0b5d3b, #1fa463);
+  color: white;
+}
+
+.aniversario-contenido {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.numero-18 {
+  font-size: 160px;
+  font-weight: 900;
+  color: rgba(255,255,255,0.15);
+  line-height: 1;
+  animation: pulse18 3s ease-in-out infinite;
+}
+
+.texto h2 {
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+
+.texto h3 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #ffd400;
+}
+
+.texto p {
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 500px;
+  margin-bottom: 15px;
+}
+
+.frase {
+  font-size: 15px;
+  font-style: italic;
+  opacity: 0.95;
+}
+
+/* Animación sutil */
+@keyframes pulse18 {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .aniversario-contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .numero-18 {
+    font-size: 120px;
+  }
+}

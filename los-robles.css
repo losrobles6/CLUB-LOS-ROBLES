@@ -13,100 +13,113 @@ body {
   padding: 80px 20px;
 }
 
-/* ===== HISTORIA DEL CLUB / TIMELINE ===== */
+/* ===== TIMELINE EUROPEO ===== */
 .historia {
-  padding: 80px 20px;
-  background: linear-gradient(180deg, #f7f9f8, #ffffff);
+  padding: 100px 20px;
+  background: #f5f7f6;
 }
 
 .historia h2 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   color: #0b5d3b;
-  margin-bottom: 60px;
-  position: relative;
+  margin-bottom: 80px;
+  letter-spacing: 1px;
 }
 
+/* CONTENEDOR */
 .timeline {
   position: relative;
   max-width: 900px;
   margin: auto;
 }
 
-/* Línea central */
+/* LINEA CENTRAL */
 .timeline::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   top: 0;
-  width: 4px;
+  width: 3px;
   height: 100%;
-  background: linear-gradient(to bottom, #0b5d3b, #1fa76b);
+  background: #0b5d3b;
   transform: translateX(-50%);
-  border-radius: 10px;
 }
 
-/* Item */
+/* ITEM */
 .timeline-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 70px;
   position: relative;
+  width: 100%;
+  margin-bottom: 90px;
+  display: flex;
+  justify-content: flex-start;
   opacity: 0;
-  animation: fadeUp 1s ease forwards;
+  animation: slideFade 0.9s ease forwards;
 }
 
 .timeline-item:nth-child(even) {
-  flex-direction: row-reverse;
+  justify-content: flex-end;
 }
 
-/* Caja de contenido */
+/* CONTENIDO */
 .timeline-content {
   background: #ffffff;
-  padding: 25px 30px;
   width: 42%;
-  border-radius: 15px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  padding: 28px 32px;
+  border-radius: 14px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
   transition: all 0.4s ease;
 }
 
 .timeline-content:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 45px rgba(11,93,59,0.25);
+  box-shadow: 0 25px 55px rgba(11,93,59,0.25);
 }
 
 .timeline-content h3 {
-  color: #0b5d3b;
   font-size: 1.2rem;
-  margin-bottom: 8px;
+  color: #0b5d3b;
+  margin-bottom: 6px;
 }
 
 .timeline-content p {
-  color: #555;
   font-size: 0.95rem;
+  color: #555;
   line-height: 1.6;
 }
 
-/* Año */
+/* AÑO */
 .timeline-year {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   background: #0b5d3b;
   color: #fff;
-  font-weight: bold;
-  font-size: 1rem;
-  padding: 14px 18px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
   z-index: 2;
-  box-shadow: 0 0 0 6px #eaf3ef;
-  transition: transform 0.3s ease;
+  box-shadow: 0 0 0 6px #f5f7f6;
+  transition: all 0.4s ease;
 }
 
-.timeline-year:hover {
-  transform: scale(1.1);
+/* AÑO ACTUAL - 2026 */
+.timeline-item.actual .timeline-year {
+  background: linear-gradient(135deg, #d4af37, #f1e6b2);
+  color: #0b5d3b;
+  box-shadow: 0 0 0 8px rgba(212,175,55,0.25);
 }
 
-/* Animación */
-@keyframes fadeUp {
+.timeline-item.actual .timeline-content {
+  border: 2px solid #d4af37;
+}
+
+/* ANIMACIÓN */
+@keyframes slideFade {
   from {
     opacity: 0;
     transform: translateY(40px);
@@ -117,6 +130,26 @@ body {
   }
 }
 
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 25px;
+  }
+
+  .timeline-item,
+  .timeline-item:nth-child(even) {
+    justify-content: flex-start;
+    padding-left: 60px;
+  }
+
+  .timeline-content {
+    width: 100%;
+  }
+
+  .timeline-year {
+    left: 25px;
+  }
+}
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .timeline::before {

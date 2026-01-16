@@ -15,6 +15,26 @@ nav {
   overflow: hidden;
 }
 
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #0b5d3b;
+  z-index: 1000;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
 /* Brillo solar animado */
 nav::after {
   content: "";

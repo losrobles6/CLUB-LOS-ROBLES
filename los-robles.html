@@ -180,5 +180,46 @@
   <span>© 2025 Club Los Robles</span>
 </footer>
 
+
+<script>
+  const contadores = document.querySelectorAll('.numero');
+  let animado = false;
+
+  const activarContadores = () => {
+    const seccion = document.querySelector('.estadisticas-club');
+    if (!seccion) return;
+
+    const top = seccion.getBoundingClientRect().top;
+    const trigger = window.innerHeight * 0.85;
+
+    if (top < trigger && !animado) {
+      contadores.forEach(contador => {
+        const objetivo = +contador.dataset.numero;
+        let actual = 0;
+        const incremento = objetivo / 60;
+
+        const actualizar = () => {
+          actual += incremento;
+          if (actual < objetivo) {
+            contador.innerText = Math.ceil(actual);
+            requestAnimationFrame(actualizar);
+          } else {
+            contador.innerText = objetivo;
+          }
+        };
+
+        actualizar();
+      });
+
+      animado = true;
+    }
+  };
+
+  window.addEventListener('scroll', activarContadores);
+  window.addEventListener('load', activarContadores);
+</script>
+
+
+  
 </body>
 </html>

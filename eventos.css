@@ -1,53 +1,86 @@
-/* ============================
-   EVENTO ESPECIAL: NAVIDAD 🎄
-   ============================ */
+/* =============================== */
+/* 🌞 EVENTO VERANO COLOMBIA 2026 */
+/* =============================== */
 
-/* NIEVE SUAVE */
-.snowflake {
-  position: fixed;
-  top: -10px;
-  z-index: 9999;
-  color: #fff;
-  user-select: none;
-  pointer-events: none;
-  font-size: 1.2rem;
-  animation: fall linear infinite;
+:root {
+  --evento-bg: linear-gradient(135deg, #0b5d3b, #1fa463);
+  --evento-acento: #ffd400;
+  --evento-secundario: #0033a0;
+  --evento-brillo: rgba(255, 212, 0, 0.35);
 }
-
-@keyframes fall {
-  to {
-    transform: translateY(110vh);
-  }
-}
-
-/* LUCES NAVIDEÑAS EN EL NAV */
-.nav-luces {
+nav {
+  background: var(--evento-bg);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
   position: relative;
   overflow: hidden;
 }
 
-.nav-luces::after {
+/* Brillo solar animado */
+nav::after {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 100%;
-  height: 6px;
-  background: repeating-linear-gradient(
-    90deg,
-    #ff0000 0 10px,
-    #00ff00 10px 20px,
-    #ffd700 20px 30px
-  );
-  animation: luces 1.5s infinite linear;
+  top: -40%;
+  left: -60%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, var(--evento-brillo), transparent 60%);
+  animation: solMove 8s linear infinite;
+  pointer-events: none;
 }
 
-@keyframes luces {
-  from { background-position: 0; }
-  to { background-position: 60px; }
+@keyframes solMove {
+  0% { transform: translateX(-30%) translateY(-20%); }
+  100% { transform: translateX(30%) translateY(20%); }
 }
 
-/* SUTIL BRILLO VERDE */
-.navidad-glow {
-  box-shadow: 0 0 15px rgba(25, 135, 84, 0.6);
+button,
+.btn {
+  background: linear-gradient(135deg, var(--evento-acento), #ffea70);
+  color: #0b5d3b;
+  border: none;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(255,212,0,0.4);
+}
+
+button:hover,
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(255,212,0,0.6);
+}
+.card,
+.categoria-card,
+.noticia,
+.partido {
+  border-top: 4px solid var(--evento-acento);
+  transition: transform 0.3s ease;
+}
+
+.card:hover,
+.categoria-card:hover,
+.noticia:hover {
+  transform: translateY(-6px);
+}
+@keyframes heat {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.08); }
+}
+
+.hero,
+.banner,
+.header {
+  animation: heat 4s ease-in-out infinite;
+}
+.evento-verano {
+  background: var(--evento-acento);
+  color: #0b5d3b;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  display: inline-block;
+}
+@media (max-width: 768px) {
+  nav {
+    background: #0b5d3b;
+  }
 }

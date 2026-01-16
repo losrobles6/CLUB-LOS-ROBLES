@@ -703,3 +703,66 @@ footer {
     width: 70px;
   }
 }
+
+
+/* BADGE */
+.badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, #d4af37, #f5e9b8);
+  color: #0b5d3b;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+/* PATROCINADORES */
+.patrocinadores {
+  margin-top: 80px;
+  background: linear-gradient(135deg, #0b5d3b, #148a59);
+  color: #fff;
+  padding: 50px 30px;
+  border-radius: 22px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.patrocinadores h3 {
+  font-size: 1.7rem;
+  margin-bottom: 15px;
+}
+
+.patrocinadores p {
+  max-width: 650px;
+  margin: 0 auto 25px;
+  line-height: 1.6;
+}
+
+.btn-patro {
+  background: #ffffff;
+  color: #0b5d3b;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-patro:hover {
+  background: #dff3ea;
+}
+
+/* ANIMACIÓN SCROLL */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -189,16 +189,23 @@
 </footer>
 
   <script>
-for (let i = 0; i < 30; i++) {
-  const snow = document.createElement("div");
-  snow.className = "snowflake";
-  snow.innerHTML = "❄";
-  snow.style.left = Math.random() * 100 + "vw";
-  snow.style.animationDuration = (5 + Math.random() * 5) + "s";
-  snow.style.opacity = Math.random();
-  snow.style.fontSize = (10 + Math.random() * 20) + "px";
-  document.body.appendChild(snow);
-}
+  const elementos = document.querySelectorAll('.scroll, .scroll-left, .scroll-right');
+
+  const mostrarScroll = () => {
+    const trigger = window.innerHeight * 0.85;
+
+    elementos.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if (top < trigger) {
+        el.classList.add('show');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', mostrarScroll);
+  window.addEventListener('load', mostrarScroll);
 </script>
+
+  
 </body>
 </html>

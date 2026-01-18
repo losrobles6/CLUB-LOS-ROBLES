@@ -500,56 +500,114 @@ footer {
   }
 }
 
-
-.convocatoria {
-  background: linear-gradient(135deg, #0b6b3a, #14a76c);
-  color: #fff;
-  max-width: 900px;
-  margin: 60px auto;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
-  text-align: center;
+/* CONVOCATORIA */
+.convocatoria-europea {
+  background: url("img/fondo-hojas.png") center / cover no-repeat;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
 }
 
-.convocatoria h2 {
-  font-size: 2rem;
+.convocatoria-card {
+  background: rgba(255, 255, 255, 0.92);
+  max-width: 850px;
+  width: 100%;
+  padding: 50px;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  backdrop-filter: blur(6px);
+}
+
+.badge {
+  display: inline-block;
+  background: #0b6b3a;
+  color: #fff;
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-size: 0.85rem;
   margin-bottom: 15px;
 }
 
-.convocatoria .descripcion {
+.convocatoria-card h2 {
+  font-size: 2.4rem;
+  color: #0b6b3a;
+  margin-bottom: 20px;
+}
+
+.intro {
   font-size: 1.05rem;
-  margin-bottom: 30px;
-  line-height: 1.6;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 40px;
 }
 
-.info-grid {
+.datos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-bottom: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-bottom: 35px;
 }
 
-.info-grid h3 {
+.dato {
+  background: #f5f8f6;
+  padding: 20px;
+  border-radius: 14px;
+}
+
+.dato h4 {
   margin-bottom: 8px;
-  font-size: 1.1rem;
+  color: #0b6b3a;
 }
 
 .requisitos {
-  background: rgba(255, 255, 255, 0.12);
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 30px;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.requisitos h4 {
+  color: #0b6b3a;
+  margin-bottom: 10px;
 }
 
 .requisitos ul {
-  list-style: none;
-  padding: 0;
+  padding-left: 18px;
 }
 
 .requisitos li {
   margin: 8px 0;
+  color: #333;
 }
+
+.acciones {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.acciones a {
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  background: #0b6b3a;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.acciones a:hover {
+  background: #088f4f;
+}
+
+.acciones .whatsapp {
+  background: #25d366;
+}
+
+.acciones .whatsapp:hover {
+  background: #1ebe5b;
+}
+/* CONVOCATORIA */
 
 .botones {
   display: flex;

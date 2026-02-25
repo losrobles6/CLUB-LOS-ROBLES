@@ -940,72 +940,47 @@ footer {
 
 
 
-/* ===== CONTENEDOR CENTRADO ===== */
+/* ===== taba de posicion ===== */
 .tabla-posiciones {
     width: 90%;
     max-width: 1100px;
-    margin: 40px auto; /* centra la tabla */
+    margin: 60px auto;
+    text-align: center;
 }
 
-/* ===== TABLA GENERAL ===== */
 .tabla {
     width: 100%;
     border-collapse: collapse;
-    font-size: 16px;
 }
 
-/* ===== ENCABEZADO (#, CLUB, PTS...) ===== */
-.tabla thead {
-    background-color: #d9d9d9; /* gris claro */
-}
-
-.tabla thead th {
-    color: white; /* texto blanco */
+.tabla th {
+    background: #d9d9d9;
+    color: white;
     padding: 12px;
 }
 
-/* ===== FILAS NORMALES ===== */
-.tabla tbody tr {
-    background-color: white;
+.tabla td {
+    background: white;
     color: black;
-    transition: 0.3s;
+    padding: 12px;
 }
 
-/* ===== HOVER AMARILLO POLLITO ===== */
-.tabla tbody tr:hover {
-    background-color: #ffeb3b;
+/* Hover amarillo */
+.tabla tr:hover td {
+    background: #ffeb3b;
 }
 
-/* ===== FILA LOS ROBLES ===== */
-.los-robles {
-    background-color: #22c55e !important;
-    color: black !important;
-    font-weight: bold;
-}
-
-/* ===== COLUMNA PTS EN NEGRILLA ===== */
+/* Columna PTS en negrilla */
 .tabla td:nth-child(3),
 .tabla th:nth-child(3) {
     font-weight: bold;
 }
 
-/* ===== CELDAS ===== */
-.tabla td {
-    padding: 12px;
-    text-align: center;
-}
-
-/* ===== LOGO AL LADO DEL NOMBRE ===== */
-.club-info {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    justify-content: center;
-}
-
-.club-info img {
-    width: 22px;
-    height: 22px;
+/* Resaltar Los Robles */
+.los-robles td {
+    background: #22c55e !important;
+    color: black !important;
+    font-weight: bold;
 }
 
 

@@ -183,7 +183,8 @@
 
 </section>
 
-
+<!-- tabla de golerode... -->
+  
  <section class="goleadores-seccion">
 
     <h2>⚽ Goleadores del Club</h2>
@@ -195,6 +196,7 @@
                 <th>Jugador</th>
                 <th>Posición</th>
                 <th>Goles</th>
+                <th>Progreso</th>
             </tr>
         </thead>
         <tbody>
@@ -203,60 +205,65 @@
                 <td></td>
                 <td>
                     <div class="jugador-info">
-                        <img src="img/jugador1.jpg" alt="Juan Pérez">
+                        <img src="img/jugador1.jpg">
                         Juan Pérez
                     </div>
                 </td>
                 <td>Delantero</td>
                 <td class="goles">12</td>
+                <td><div class="barra"><div class="relleno"></div></div></td>
             </tr>
 
             <tr>
                 <td></td>
                 <td>
                     <div class="jugador-info">
-                        <img src="img/jugador2.jpg" alt="Carlos Gómez">
+                        <img src="img/jugador2.jpg">
                         Carlos Gómez
                     </div>
                 </td>
                 <td>Extremo</td>
-                <td class="goles">13</td>
+                <td class="goles">8</td>
+                <td><div class="barra"><div class="relleno"></div></div></td>
             </tr>
 
             <tr>
                 <td></td>
                 <td>
                     <div class="jugador-info">
-                        <img src="img/jugador3.jpg" alt="Luis Torres">
+                        <img src="img/jugador3.jpg">
                         Luis Torres
                     </div>
                 </td>
                 <td>Mediocampista</td>
                 <td class="goles">6</td>
+                <td><div class="barra"><div class="relleno"></div></div></td>
             </tr>
 
             <tr>
                 <td></td>
                 <td>
                     <div class="jugador-info">
-                        <img src="img/jugador4.jpg" alt="Andrés Rojas">
+                        <img src="img/jugador4.jpg">
                         Andrés Rojas
                     </div>
                 </td>
                 <td>Delantero</td>
                 <td class="goles">5</td>
+                <td><div class="barra"><div class="relleno"></div></div></td>
             </tr>
 
             <tr>
                 <td></td>
                 <td>
                     <div class="jugador-info">
-                        <img src="img/jugador5.jpg" alt="David Morales">
+                        <img src="img/jugador5.jpg">
                         David Morales
                     </div>
                 </td>
                 <td>Volante</td>
                 <td class="goles">3</td>
+                <td><div class="barra"><div class="relleno"></div></div></td>
             </tr>
 
         </tbody>
@@ -264,7 +271,8 @@
 
 </section>
   
-
+<!-- tienda los robes ... -->
+  
   <section class="shop-preview">
 
   <h2>Tienda Oficial</h2>
@@ -461,29 +469,41 @@
   revealOnScroll();
 </script>
 
-  <script>
+<script>
 document.addEventListener("DOMContentLoaded", function() {
+
     const tabla = document.getElementById("tablaGoleadores");
     const tbody = tabla.querySelector("tbody");
-    const filas = Array.from(tbody.querySelectorAll("tr"));
+    let filas = Array.from(tbody.querySelectorAll("tr"));
 
-    // Ordenar por goles (de mayor a menor)
+    // Ordenar por goles
     filas.sort((a, b) => {
-        return parseInt(b.querySelector(".goles").textContent) - 
+        return parseInt(b.querySelector(".goles").textContent) -
                parseInt(a.querySelector(".goles").textContent);
     });
 
-    // Limpiar tabla
     tbody.innerHTML = "";
 
-    // Reinsertar ordenados y numerar
+    const maxGoles = parseInt(filas[0].querySelector(".goles").textContent);
+
     filas.forEach((fila, index) => {
+
+        // Numeración
         fila.querySelector("td").textContent = index + 1;
-        if (index === 0) {
-            fila.classList.add("lider");
-        }
+
+        // Colores Top 3
+        if (index === 0) fila.classList.add("oro");
+        if (index === 1) fila.classList.add("plata");
+        if (index === 2) fila.classList.add("bronce");
+
+        // Barra proporcional
+        const goles = parseInt(fila.querySelector(".goles").textContent);
+        const porcentaje = (goles / maxGoles) * 100;
+        fila.querySelector(".relleno").style.width = porcentaje + "%";
+
         tbody.appendChild(fila);
     });
+
 });
 </script>
   

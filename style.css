@@ -974,14 +974,7 @@ footer {
   transform: translateY(-3px);
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #0f172a;
-    color: white;
-    display: flex;
-    justify-content: center;
-    padding: 40px;
-}
+
 
 .tabla-container {
     width: 100%;

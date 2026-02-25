@@ -469,6 +469,50 @@
   revealOnScroll();
 </script>
 
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    const tabla = document.getElementById("tablaPosiciones");
+    const tbody = tabla.querySelector("tbody");
+    let filas = Array.from(tbody.querySelectorAll("tr"));
+
+    filas.sort((a, b) => {
+
+        let ptsA = parseInt(a.querySelector(".pts").textContent);
+        let ptsB = parseInt(b.querySelector(".pts").textContent);
+
+        if (ptsA !== ptsB) {
+            return ptsB - ptsA; // ordenar por puntos
+        }
+
+        // Si empatan en puntos, ordenar por diferencia de gol
+        let dgA = parseInt(a.querySelector(".dg").textContent);
+        let dgB = parseInt(b.querySelector(".dg").textContent);
+
+        return dgB - dgA;
+    });
+
+    tbody.innerHTML = "";
+
+    filas.forEach((fila, index) => {
+
+        // Numeración automática
+        fila.querySelector("td").textContent = index + 1;
+
+        // Resaltar Los Robles
+        if (fila.innerText.includes("Los Robles")) {
+            fila.classList.add("los-robles");
+        }
+
+        tbody.appendChild(fila);
+    });
+
+});
+</script>
+
+  
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
 

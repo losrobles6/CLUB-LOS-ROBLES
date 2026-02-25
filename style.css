@@ -70,50 +70,81 @@ body {
   text-align: center;
 }
 
-/* CALENDARIO */
-.calendario {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
+/* CALENDARIO inicio*/
+.resumen-partidos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 60px auto;
+    flex-wrap: wrap;
 }
 
-.match {
-  display: grid;
-  grid-template-columns: 80px 1fr 100px;
-  align-items: center;
-  background: white;
-  margin-bottom: 15px;
-  padding: 15px;
-  border-left: 6px solid #0b5d3b;
+.card {
+    background: #f4f4f4;
+    padding: 30px;
+    border-radius: 15px;
+    width: 340px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    position: relative;
+    transition: 0.3s ease;
 }
 
-.fecha {
-  text-align: center;
+.card:hover {
+    transform: translateY(-5px);
 }
 
-.fecha .dia {
-  font-size: 28px;
-  font-weight: bold;
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
-.fecha .mes {
-  font-size: 14px;
-  color: #0b5d3b;
+.derrota {
+    background: #ef4444;
+    color: white;
 }
 
-.hora {
-  text-align: center;
-  font-weight: bold;
+.proximo {
+    background: #22c55e;
+    color: white;
 }
 
-footer {
-  background: #0b5d3b;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
+.resultado {
+    font-size: 18px;
+    margin: 20px 0;
 }
 
+.marcador-global {
+    color: #555;
+    font-size: 14px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 22px;
+    background: #166534;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #22c55e;
+}
+
+.contador {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #166534;
+}
 
 
 /* PATROCINADORES */

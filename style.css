@@ -198,7 +198,7 @@ body {
 .btn-patrocinador {
     display: inline-block;
     padding: 12px 25px;
-    background: #e6ede9;
+    background: #21ad5d;
     color: white;
     border-radius: 25px;
     text-decoration: none;
@@ -834,42 +834,7 @@ body {
   font-weight: bold;
 }
 
-/* PATROCINADORES */
-.patrocinadores {
-  margin-top: 80px;
-  background: linear-gradient(135deg, #0b5d3b, #148a59);
-  color: #fff;
-  padding: 50px 30px;
-  border-radius: 22px;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
-.patrocinadores h3 {
-  font-size: 1.7rem;
-  margin-bottom: 15px;
-}
-
-.patrocinadores p {
-  max-width: 650px;
-  margin: 0 auto 25px;
-  line-height: 1.6;
-}
-
-.btn-patro {
-  background: #ffffff;
-  color: #0b5d3b;
-  padding: 14px 28px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-.btn-patro:hover {
-  background: #dff3ea;
-}
 
 /* ANIMACIÓN SCROLL */
 .reveal {
@@ -883,111 +848,6 @@ body {
   transform: translateY(0);
 }
 
-
-
-/* Sección general */
-.sponsor-cta {
-  padding: 80px 20px;
-  background-color: #f6f8f7;
-  display: flex;
-  justify-content: center;
-}
-
-/* Caja principal */
-.sponsor-box {
-  max-width: 900px;
-  width: 100%;
-  background: linear-gradient(135deg, #0b5f3c, #0f7a4a);
-  border-radius: 24px;
-  padding: 50px 40px;
-  text-align: center;
-  color: #ffffff;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-}
-
-/* Etiqueta superior */
-.sponsor-badge {
-  display: inline-block;
-  background-color: #ffd34d;
-  color: #1f1f1f;
-  font-weight: 700;
-  font-size: 13px;
-  padding: 8px 16px;
-  border-radius: 30px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
-
-/* Título */
-.sponsor-box h2 {
-  font-size: 36px;
-  margin-bottom: 15px;
-  font-weight: 800;
-}
-
-/* Descripción */
-.sponsor-description {
-  font-size: 17px;
-  line-height: 1.6;
-  max-width: 650px;
-  margin: 0 auto 40px;
-  color: #e6f3ec;
-}
-
-/* Beneficios */
-.sponsor-benefits {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  margin-bottom: 40px;
-}
-
-/* Card de beneficio */
-.benefit-item {
-  background-color: rgba(255, 255, 255, 0.12);
-  border-radius: 16px;
-  padding: 25px 20px;
-  backdrop-filter: blur(4px);
-}
-
-.benefit-item h4 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  font-weight: 700;
-  color: #ffffff;
-}
-
-.beneficio {
-    background: transparent; /* mismo fondo de la web */
-    padding: 25px;
-    border-radius: 15px;
-    border: 1px solid rgba(0,0,0,0.08);
-    transition: 0.3s;
-}
-
-.beneficios-patrocinio h2 {
-    color: #166534; /* verde institucional */
-    font-weight: bold;
-}
-
-/* Botón */
-.sponsor-btn {
-  display: inline-block;
-  background-color: #ffffff;
-  color: #0b5f3c;
-  padding: 15px 36px;
-  border-radius: 40px;
-  font-weight: 700;
-  text-decoration: none;
-  font-size: 15px;
-  transition: all 0.3s ease;
-}
-
-.sponsor-btn:hover {
-  background-color: #ffd34d;
-  color: #1f1f1f;
-  transform: translateY(-3px);
-}
 
 
 

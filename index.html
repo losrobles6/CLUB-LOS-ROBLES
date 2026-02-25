@@ -460,6 +460,32 @@
   window.addEventListener("scroll", revealOnScroll);
   revealOnScroll();
 </script>
+
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const tabla = document.getElementById("tablaGoleadores");
+    const tbody = tabla.querySelector("tbody");
+    const filas = Array.from(tbody.querySelectorAll("tr"));
+
+    // Ordenar por goles (de mayor a menor)
+    filas.sort((a, b) => {
+        return parseInt(b.querySelector(".goles").textContent) - 
+               parseInt(a.querySelector(".goles").textContent);
+    });
+
+    // Limpiar tabla
+    tbody.innerHTML = "";
+
+    // Reinsertar ordenados y numerar
+    filas.forEach((fila, index) => {
+        fila.querySelector("td").textContent = index + 1;
+        if (index === 0) {
+            fila.classList.add("lider");
+        }
+        tbody.appendChild(fila);
+    });
+});
+</script>
   
 </body>
 </html>

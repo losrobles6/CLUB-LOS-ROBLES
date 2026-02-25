@@ -976,54 +976,70 @@ footer {
 
 
 
-.tabla-container {
-    width: 100%;
-    max-width: 1000px;
+/* ===== CONTENEDOR CENTRADO ===== */
+.tabla-posiciones {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto; /* centra la tabla */
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #22c55e;
-}
-
+/* ===== TABLA GENERAL ===== */
 .tabla {
     width: 100%;
     border-collapse: collapse;
-    background: #f3f7b5;
-    border-radius: 10px;
-    overflow: hidden;
+    font-size: 16px;
 }
 
+/* ===== ENCABEZADO (#, CLUB, PTS...) ===== */
 .tabla thead {
-    background: #22c55e;
-    color: black;
+    background-color: #d9d9d9; /* gris claro */
 }
 
-.tabla th, .tabla td {
+.tabla thead th {
+    color: white; /* texto blanco */
+    padding: 12px;
+}
+
+/* ===== FILAS NORMALES ===== */
+.tabla tbody tr {
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+
+/* ===== HOVER AMARILLO POLLITO ===== */
+.tabla tbody tr:hover {
+    background-color: #ffeb3b;
+}
+
+/* ===== FILA LOS ROBLES ===== */
+.los-robles {
+    background-color: #22c55e !important;
+    color: black !important;
+    font-weight: bold;
+}
+
+/* ===== COLUMNA PTS EN NEGRILLA ===== */
+.tabla td:nth-child(3),
+.tabla th:nth-child(3) {
+    font-weight: bold;
+}
+
+/* ===== CELDAS ===== */
+.tabla td {
     padding: 12px;
     text-align: center;
 }
 
-.tabla tbody tr {
-    border-bottom: 1px solid #334155;
-    transition: 0.3s ease;
+/* ===== LOGO AL LADO DEL NOMBRE ===== */
+.club-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
 }
 
-.tabla tbody tr:hover {
-    background: #334155;
-    transform: scale(1.01);
-}
-
-.primero {
-    background: linear-gradient(90deg, #16a34a, #22c55e);
-    font-weight: bold;
-    color: black;
-}
-
-@media (max-width: 768px) {
-    .tabla th, .tabla td {
-        padding: 8px;
-        font-size: 12px;
-    }
+.club-info img {
+    width: 22px;
+    height: 22px;
 }

@@ -1146,3 +1146,28 @@ body {
     color: white;
     font-weight: bold;
 }
+
+
+.preview-noticia {
+    display: flex;
+    justify-content: center;
+    margin: 80px auto;
+}
+
+.card-noticia {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    width: 70%;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card-noticia h2 {
+    margin-bottom: 15px;
+}
+
+.card-noticia p {
+    margin: 20px 0;
+    color: #555;
+}

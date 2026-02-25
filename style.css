@@ -187,7 +187,7 @@ body {
 
 .logo-box:hover {
     border-color: #edf5f0;
-    color: #22c55e;
+    color: #e6ebe8;
     transform: scale(1.05);
 }
 
@@ -198,7 +198,7 @@ body {
 .btn-patrocinador {
     display: inline-block;
     padding: 12px 25px;
-    background: #166534;
+    background: #e6ede9;
     color: white;
     border-radius: 25px;
     text-decoration: none;

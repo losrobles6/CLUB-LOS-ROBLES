@@ -183,6 +183,92 @@
 
 </section>
 
+
+  <section class="tabla-seccion">
+
+    <h2>📊 Primera C 2026</h2>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="mostrarTab('posiciones')">Tabla</button>
+        <button class="tab-btn" onclick="mostrarTab('goleadores')">Goleadores</button>
+    </div>
+
+    <!-- TABLA POSICIONES -->
+    <div id="posiciones" class="tab-content active">
+        <table class="tabla">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Club</th>
+                    <th>PTS</th>
+                    <th>PJ</th>
+                    <th>PG</th>
+                    <th>PE</th>
+                    <th>PP</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="los-robles">
+                    <td>1</td>
+                    <td>Los Robles</td>
+                    <td>43</td>
+                    <td>18</td>
+                    <td>14</td>
+                    <td>1</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Unión Chocó</td>
+                    <td>35</td>
+                    <td>18</td>
+                    <td>11</td>
+                    <td>2</td>
+                    <td>5</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- TABLA GOLEADORES -->
+    <div id="goleadores" class="tab-content">
+        <table class="tabla">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Jugador</th>
+                    <th>Posición</th>
+                    <th>Goles</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Juan Pérez</td>
+                    <td>Delantero</td>
+                    <td><strong>12</strong></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Carlos Gómez</td>
+                    <td>Extremo</td>
+                    <td><strong>8</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</section>
+
+<script>
+function mostrarTab(tab) {
+    document.querySelectorAll(".tab-content").forEach(el => el.classList.remove("active"));
+    document.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active"));
+
+    document.getElementById(tab).classList.add("active");
+    event.target.classList.add("active");
+}
+</script>
   
 
   <section class="shop-preview">

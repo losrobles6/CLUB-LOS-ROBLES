@@ -957,10 +957,17 @@ body {
   color: #ffffff;
 }
 
-.benefit-item p {
-  font-size: 14px;
-  line-height: 1.5;
-  color: #d8f0e4;
+.beneficio {
+    background: transparent; /* mismo fondo de la web */
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.beneficios-patrocinio h2 {
+    color: #166534; /* verde institucional */
+    font-weight: bold;
 }
 
 /* Botón */

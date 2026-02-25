@@ -500,113 +500,77 @@ footer {
   }
 }
 
-/* CONVOCATORIA */
-.convocatoria-europea {
-  background: url("img/fondo-hojas.png") center / cover no-repeat;
-  padding: 80px 20px;
-  display: flex;
-  justify-content: center;
+/* ===== SECCIÓN PREVIO TORNEO ===== */
+.previo-torneo {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
 }
 
-.convocatoria-card {
-  background: rgba(255, 255, 255, 0.92);
-  max-width: 850px;
-  width: 100%;
-  padding: 50px;
-  border-radius: 18px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
-  text-align: center;
-  backdrop-filter: blur(6px);
+.previo-card {
+    background: #ffffff;
+    max-width: 800px;
+    width: 100%;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
-.badge {
-  display: inline-block;
-  background: #0b6b3a;
-  color: #fff;
-  padding: 6px 18px;
-  border-radius: 30px;
-  font-size: 0.85rem;
-  margin-bottom: 15px;
+.previo-card h2 {
+    font-size: 32px;
+    color: #166534;
+    margin-bottom: 20px;
 }
 
-.convocatoria-card h2 {
-  font-size: 2.4rem;
-  color: #0b6b3a;
-  margin-bottom: 20px;
+.previo-card p {
+    color: #444;
+    margin-bottom: 15px;
+    line-height: 1.6;
 }
 
-.intro {
-  font-size: 1.05rem;
-  color: #333;
-  line-height: 1.7;
-  margin-bottom: 40px;
+.etiqueta {
+    background: #facc15;
+    color: #000;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
 }
 
-.datos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-bottom: 35px;
+/* ===== BOTONES ===== */
+.botones-previo {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.dato {
-  background: #f5f8f6;
-  padding: 20px;
-  border-radius: 14px;
+.btn {
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
 }
 
-.dato h4 {
-  margin-bottom: 8px;
-  color: #0b6b3a;
+.btn-calendario {
+    background: #166534;
+    color: white;
 }
 
-.requisitos {
-  text-align: left;
-  margin-bottom: 40px;
+.btn-noticias {
+    background: #22c55e;
+    color: white;
 }
 
-.requisitos h4 {
-  color: #0b6b3a;
-  margin-bottom: 10px;
+.btn:hover {
+    background: #facc15;
+    color: black;
 }
 
-.requisitos ul {
-  padding-left: 18px;
-}
 
-.requisitos li {
-  margin: 8px 0;
-  color: #333;
-}
-
-.acciones {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.acciones a {
-  padding: 14px 28px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  background: #0b6b3a;
-  color: #fff;
-  transition: 0.3s ease;
-}
-
-.acciones a:hover {
-  background: #088f4f;
-}
-
-.acciones .whatsapp {
-  background: #25d366;
-}
-
-.acciones .whatsapp:hover {
-  background: #1ebe5b;
-}
 /* CONVOCATORIA */
 
 .botones {

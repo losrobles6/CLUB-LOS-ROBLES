@@ -1051,3 +1051,115 @@ body {
     margin: 20px 0;
     color: #555;
 }
+/* ===== SECCIÓN CTA PATROCINADORES ===== */
+
+.sponsor-cta {
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg, #0f3d1e, #166534);
+    position: relative;
+    overflow: hidden;
+}
+
+/* efecto luz suave de fondo */
+.sponsor-cta::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 70%);
+    top: -200px;
+    right: -200px;
+}
+
+/* Caja principal */
+.sponsor-box {
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 25px;
+    padding: 50px;
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 1;
+}
+
+/* Badge */
+.sponsor-badge {
+    display: inline-block;
+    background: #22c55e;
+    color: #0f3d1e;
+    font-weight: bold;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+/* Título */
+.sponsor-box h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Descripción */
+.sponsor-description {
+    max-width: 650px;
+    margin: 0 auto 40px;
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* Beneficios */
+.sponsor-benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.benefit-item {
+    background: rgba(255,255,255,0.08);
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s ease;
+}
+
+.benefit-item:hover {
+    background: rgba(255,255,255,0.15);
+    transform: translateY(-5px);
+}
+
+.benefit-item h4 {
+    margin-bottom: 10px;
+    color: #22c55e;
+}
+
+.benefit-item p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Botón Premium */
+.sponsor-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background: #22c55e;
+    color: #0f3d1e;
+    font-weight: bold;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    box-shadow: 0 0 20px rgba(34,197,94,0.6);
+}
+
+.sponsor-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(34,197,94,0.9);
+}

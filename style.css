@@ -1011,9 +1011,10 @@ footer {
 
 /* ===== goleradores los robles ===== */
 
+/* ===== SECCIÓN ===== */
 .goleadores-seccion {
     width: 90%;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 70px auto;
     text-align: center;
 }
@@ -1039,7 +1040,7 @@ footer {
     background: #ffeb3b;
 }
 
-/* Foto + nombre */
+/* FOTO JUGADOR */
 .jugador-info {
     display: flex;
     align-items: center;
@@ -1054,8 +1055,35 @@ footer {
     object-fit: cover;
 }
 
-/* Goleador líder dorado */
-.lider td {
+/* ===== BARRA DE GOLES ===== */
+.barra {
+    width: 100%;
+    background: #eee;
+    height: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.relleno {
+    height: 100%;
+    width: 0;
+    background: #22c55e;
+    transition: width 1s ease;
+}
+
+/* ===== TOP 3 ===== */
+.oro td {
     background: gold !important;
+    font-weight: bold;
+}
+
+.plata td {
+    background: silver !important;
+    font-weight: bold;
+}
+
+.bronce td {
+    background: #cd7f32 !important;
+    color: white;
     font-weight: bold;
 }

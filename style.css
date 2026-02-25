@@ -161,7 +161,7 @@ body {
 .descripcion-categoria {
     max-width: 600px;
     margin: 10px auto 30px;
-    color: #555;
+    color: #080808;
     font-size: 14px;
 }
 
@@ -186,7 +186,7 @@ body {
 }
 
 .logo-box:hover {
-    border-color: #22c55e;
+    border-color: #edf5f0;
     color: #22c55e;
     transform: scale(1.05);
 }
@@ -206,7 +206,7 @@ body {
 }
 
 .btn-patrocinador:hover {
-    background: #22c55e;
+    background: #f0f5f2;
 }
 
 

@@ -982,6 +982,59 @@ footer {
     color: black !important;
     font-weight: bold;
 }
+/* Logo + nombre alineados */
+.club-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
+
+.club-info img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* Centrar tabla */
+.tabla-posiciones {
+    width: 90%;
+    max-width: 1100px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+/* Encabezado */
+.tabla th {
+    background: #d9d9d9;
+    color: white;
+    padding: 12px;
+}
+
+/* Celdas */
+.tabla td {
+    background: white;
+    color: black;
+    padding: 12px;
+}
+
+/* Hover amarillo */
+.tabla tr:hover td {
+    background: #ffeb3b;
+}
+
+/* Columna PTS en negrilla */
+.tabla td:nth-child(3),
+.tabla th:nth-child(3) {
+    font-weight: bold;
+}
+
+/* Resaltar Los Robles */
+.los-robles td {
+    background: #22c55e !important;
+    color: black !important;
+    font-weight: bold;
+}
 
 
 /* ===== goleradores los robles ===== */
